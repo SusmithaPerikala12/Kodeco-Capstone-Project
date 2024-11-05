@@ -6,6 +6,8 @@ struct SideMenuView: View {
     @Binding var isShowing: Bool
     // To know which option is selected.
     @Binding var selectedTab: Int
+    // To highlight which tab is selected.
+    @State private var selectedOption: SidemenuOptions?
     var body: some View {
         ZStack {
             if isShowing {
@@ -19,10 +21,11 @@ struct SideMenuView: View {
                         VStack {
                             ForEach(SidemenuOptions.allCases) { option in
                                 Button {
+                                    selectedOption = option
                                     selectedTab = option.rawValue
                                     isShowing.toggle()
                                 } label: {
-                                    SideMenuRowView(option: option)
+                                    SideMenuRowView(option: option, selectedOption: $selectedOption)
                                 }
 
                             }
