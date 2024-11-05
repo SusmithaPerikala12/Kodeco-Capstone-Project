@@ -1,16 +1,16 @@
-//SideMenu options.
+// SideMenu options.
 import Foundation
 
 enum SidemenuOptions: Int, CaseIterable {
-    case Home
+    case home
     case bmi
     case underweight
     case overweight
     case obesity
-    
+
     var title: String {
         switch self {
-        case .Home:
+        case .home:
             return "Home"
         case .bmi:
             return "Know about BMI"
@@ -24,7 +24,7 @@ enum SidemenuOptions: Int, CaseIterable {
     }
     var systemImageName: String {
         switch self {
-        case .Home:
+        case .home:
             return "house.fill"
         case .bmi:
             return "magnifyingglass"

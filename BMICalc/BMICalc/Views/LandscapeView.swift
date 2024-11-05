@@ -1,11 +1,10 @@
-//Landscape View for Home page.
+// Landscape View for Home page.
 import SwiftUI
 
 struct LandscapeView: View {
-    
     @Binding var weight: Double
     @Binding var height: Double
-    
+
     var body: some View {
         HStack(spacing: 16) {
             ImageTextView()

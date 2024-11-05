@@ -1,4 +1,4 @@
-//This View contains Image and Text aligned in Vstack.
+// This View contains Image and Text aligned in Vstack.
 
 import SwiftUI
 
@@ -11,7 +11,7 @@ struct ImageTextView: View {
         Image("HomeBackground")
               .resizable()
               .scaledToFit()
-              
+
       }
     }
 }

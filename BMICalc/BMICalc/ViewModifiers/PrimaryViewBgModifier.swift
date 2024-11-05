@@ -1,4 +1,4 @@
-//Custom Modifier 
+// Custom Modifier 
 import Foundation
 import SwiftUI
 

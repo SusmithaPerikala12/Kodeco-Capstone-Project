@@ -2,10 +2,10 @@
 import SwiftUI
 
 struct SideMenuView: View {
-    //To control the side menu
+    // To control the side menu
     @Binding var isShowing: Bool
-    //To know which option is selected.
-    @Binding var selectedTab:Int
+    // To know which option is selected.
+    @Binding var selectedTab: Int
     var body: some View {
         ZStack {
             if isShowing {
@@ -30,7 +30,7 @@ struct SideMenuView: View {
                         Spacer()
                     }
                     .padding()
-                    .frame(width: 270, alignment: .leading) //width for HStack
+                    .frame(width: 270, alignment: .leading) // width for HStack
                     .background(.white)
                     .foregroundStyle(.black)
                     Spacer()
