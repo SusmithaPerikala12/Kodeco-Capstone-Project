@@ -5,18 +5,23 @@ struct SliderStackView: View {
 
     @Binding var weight: Double
     @Binding var height: Double
-
     var body: some View {
-        VStack {
-            SliderView(singleSlider: .weight, value: $weight)
-            SliderView(singleSlider: .height, value: $height)
+        NavigationView {
+            VStack {
+                SliderView(singleSlider: .weight, value: $weight)
+                SliderView(singleSlider: .height, value: $height)
 
-            Button("Calculate") {
-                // To be updated later
+                NavigationLink(destination: BMIResultView(bmiVal: calculateBMI())) {
+                    Text("Calculate")
+                    .primaryBg()
+                }
 
             }
-            .primaryBg()
-        }
+        } .tint(Color(.pink))
+    }
+    func calculateBMI() -> Double {
+        let heightInMeters = height / 100
+        return weight / (heightInMeters * heightInMeters)
     }
 
 }
