@@ -7,6 +7,7 @@ enum SidemenuOptions: Int, CaseIterable {
     case underweight
     case overweight
     case obesity
+    case history
 
     var title: String {
         switch self {
@@ -20,6 +21,8 @@ enum SidemenuOptions: Int, CaseIterable {
             return "Overweight"
         case .obesity:
             return "Obesity"
+        case .history:
+            return "History"
         }
     }
     var systemImageName: String {
@@ -34,6 +37,8 @@ enum SidemenuOptions: Int, CaseIterable {
             return "heart.fill"
         case .obesity:
             return "heart.fill"
+        case .history:
+            return "list.star"
         }
     }
 }

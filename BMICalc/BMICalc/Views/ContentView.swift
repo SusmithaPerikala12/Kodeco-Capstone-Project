@@ -11,7 +11,10 @@ struct ContentView: View {
                 TabView(selection: $selectedTab) {
                     HomeView()
                         .tag(0)
-                    // To be added later for other menus.
+                    AboutBMIView()
+                        .tag(1)
+                    HistoryView()
+                        .tag(5)
 
                 }
 
@@ -23,7 +26,7 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
-                        showMenu.toggle()
+                            showMenu.toggle()
                     } label: {
                         Image(systemName: "line.3.horizontal")
                     }

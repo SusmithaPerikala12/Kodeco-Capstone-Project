@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BMIResultView: View {
 
-    @State var bmiVal: Double
+    @Binding var bmiBrain: BMIBrain
     var body: some View {
 
             ZStack {
@@ -20,13 +20,32 @@ struct BMIResultView: View {
                     Text("BMI Value: ")
                         .fontWeight(.bold)
                         .foregroundStyle(.pink)
-                        .padding(.top, -100)
+                        .padding(.top, -90)
                         .font(.system(size: 43))
-                    Text("\(bmiVal, specifier: "%.2f")")
-                        .padding(.top, -45)
-                        .foregroundStyle(.pink)
-                        .fontWeight(.bold)
-                        .font(.system(size: 25))
+                    Text(bmiBrain.bmiVal)
+                        .textModifier()
+                        .padding(.top, -25)
+                    Text("Your BMI Category is:")
+                        .textModifier()
+                        .padding(.top, 10)
+                    Text("\"\(bmiBrain.categoryBMI())\"")
+                        .padding(.top, 20)
+                        .textModifier()
+                    Button(action:
+                            {
+                        let bmiViewModel = BMIViewModel(weight: Int(bmiBrain.weight), height: Int(bmiBrain.height), bmiVal: bmiBrain.bmiVal)
+                        bmiViewModel.saveSelections(bmiBrain: bmiBrain)
+
+                    })
+                    {      Text("Save")
+                            .font(.headline)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                    .padding(.horizontal)
 
                 }
             }
@@ -34,5 +53,5 @@ struct BMIResultView: View {
 }
 
 #Preview {
-    BMIResultView(bmiVal: 50.05)
+    BMIResultView(bmiBrain: .constant(BMIBrain(weight: 50, height: 50)))
 }

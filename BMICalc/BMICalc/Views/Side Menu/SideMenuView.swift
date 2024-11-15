@@ -14,16 +14,23 @@ struct SideMenuView: View {
                 Rectangle()
                     .opacity(0.3)
                     .ignoresSafeArea()
-                    .onTapGesture { isShowing.toggle() }
+                    .onTapGesture {
+                        // withAnimation {
+                        isShowing.toggle()
+                    // }
+            }
                 HStack {
                     VStack(alignment: .leading, spacing: 32) {
                         SideMenuHeaderView()
                         VStack {
                             ForEach(SidemenuOptions.allCases) { option in
                                 Button {
-                                    selectedOption = option
-                                    selectedTab = option.rawValue
-                                    isShowing.toggle()
+                                    // withAnimation {
+                                        selectedOption = option
+                                        selectedTab = option.rawValue
+                                        isShowing.toggle()
+                                    // }
+
                                 } label: {
                                     SideMenuRowView(option: option, selectedOption: $selectedOption)
                                 }
