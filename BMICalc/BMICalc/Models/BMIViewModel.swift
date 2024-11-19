@@ -7,14 +7,16 @@
 
 import Foundation
 
-struct BMIViewModel: Identifiable, Codable, Hashable{
+struct BMIViewModel: Identifiable, Codable, Hashable {
     var id = UUID()
     let weight: Int
     let height: Int
     let bmiVal: String
+    let bmiCategory: String
 
     func saveSelections(bmiBrain: BMIBrain) {
-            let newEntry = BMIViewModel(weight: Int(bmiBrain.weight), height: Int(bmiBrain.height), bmiVal: bmiBrain.bmiVal)
+            let newEntry = BMIViewModel(weight: Int(bmiBrain.weight),
+                                        height: Int(bmiBrain.height), bmiVal: bmiBrain.bmiVal, bmiCategory: bmiBrain.bmiCategory)
 
             var savedEntries = BMIViewModel.loadSavedEntries()
             savedEntries.append(newEntry)

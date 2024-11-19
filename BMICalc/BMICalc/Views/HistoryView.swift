@@ -13,7 +13,7 @@ struct HistoryView: View {
         NavigationStack {
             List {
                 ForEach(bmiViewModelList) { entry in
-                    Text("Weight: \(entry.weight) Kg, Height: \(entry.height) Cm , Bmi Value: \(entry.bmiVal)")
+                    Text("Weight: \(entry.weight) Kg, Height: \(entry.height) Cm , Bmi Value: \(entry.bmiVal) Bmi Category: \(entry.bmiCategory)")
                 }
                 .onDelete(perform: deleteEntry)
             }

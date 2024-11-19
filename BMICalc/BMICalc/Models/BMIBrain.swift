@@ -14,6 +14,10 @@ struct BMIBrain {
     var bmiVal: String {
         return "\(calculateBMI())"
     }
+    
+    var bmiCategory: String {
+        return "\(categoryBMI())"
+    }
 
     func calculateBMI() -> String {
         let heightInMeters = Double(Int(height)) / 100

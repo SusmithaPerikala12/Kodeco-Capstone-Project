@@ -10,6 +10,7 @@ import SwiftUI
 struct BMIResultView: View {
 
     @Binding var bmiBrain: BMIBrain
+    @Environment(\.dismiss) var dismiss
     var body: some View {
 
             ZStack {
@@ -33,17 +34,13 @@ struct BMIResultView: View {
                         .textModifier()
                     Button(action:
                             {
-                        let bmiViewModel = BMIViewModel(weight: Int(bmiBrain.weight), height: Int(bmiBrain.height), bmiVal: bmiBrain.bmiVal)
+                        let bmiViewModel = BMIViewModel(weight: Int(bmiBrain.weight), height: Int(bmiBrain.height), bmiVal: bmiBrain.bmiVal, bmiCategory: bmiBrain.bmiCategory)
                         bmiViewModel.saveSelections(bmiBrain: bmiBrain)
+                        dismiss()
 
                     })
                     {      Text("Save")
-                            .font(.headline)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
+                            .primaryBg()
                     }
                     .padding(.horizontal)
 
