@@ -1,15 +1,15 @@
-//Slider for weight and height.
+// Slider for weight and height.
 import Foundation
 import SwiftUI
 
 enum Sliders {
     case weight
     case height
-    
+
     var title: String {
         String(describing: self).capitalized
     }
-    
+
     var tintColor: Color {
         switch self {
         case .weight:

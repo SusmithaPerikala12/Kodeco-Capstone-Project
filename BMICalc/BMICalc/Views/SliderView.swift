@@ -1,9 +1,9 @@
-//Generalized View for Sliders.
+// Generalized View for Sliders.
 
 import SwiftUI
 
 struct SliderView: View {
-    
+
     let singleSlider: Sliders
     @Binding var value: Double
     var body: some View {
@@ -18,5 +18,5 @@ struct SliderView: View {
 
 #Preview {
     SliderView(singleSlider: .weight, value: .constant(50))
-    
+
 }
