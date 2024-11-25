@@ -21,7 +21,7 @@ struct BMIResultView: View {
                     Text("BMI Value: ")
                         .fontWeight(.bold)
                         .foregroundStyle(.pink)
-                        .padding(.top, -90)
+                        .padding(.top, -70)
                         .font(.system(size: 43))
                     Text(bmiBrain.bmiVal)
                         .textModifier()
@@ -29,20 +29,15 @@ struct BMIResultView: View {
                     Text("Your BMI Category is:")
                         .textModifier()
                         .padding(.top, 10)
-                    Text("\"\(bmiBrain.categoryBMI())\"")
+                    Text("\(Image(systemName: "heart.circle")) \(bmiBrain.categoryBMI()) \(Image(systemName: "heart.circle"))")
                         .padding(.top, 20)
                         .textModifier()
-                    Button(action:
-                            {
+                    Button("Save") {
                         let bmiViewModel = BMIViewModel(weight: Int(bmiBrain.weight), height: Int(bmiBrain.height), bmiVal: bmiBrain.bmiVal, bmiCategory: bmiBrain.bmiCategory)
                         bmiViewModel.saveSelections(bmiBrain: bmiBrain)
-                        dismiss()
-
-                    })
-                    {      Text("Save")
-                            .primaryBg()
+                            dismiss()
                     }
-                    .padding(.horizontal)
+                    .movingbutton()
 
                 }
             }

@@ -13,8 +13,10 @@ struct ContentView: View {
                         .tag(0)
                     AboutBMIView()
                         .tag(1)
+                    QuoteView()
+                        .tag(2)
                     HistoryView()
-                        .tag(5)
+                        .tag(6)
 
                 }
 

@@ -13,7 +13,8 @@ struct HistoryView: View {
         NavigationStack {
             List {
                 ForEach(bmiViewModelList) { entry in
-                    Text("Weight: \(entry.weight) Kg, Height: \(entry.height) Cm , Bmi Value: \(entry.bmiVal) Bmi Category: \(entry.bmiCategory)")
+                    Text("BMI Category: \(entry.bmiCategory)\n      BMI Value: \(entry.bmiVal)\n      Height: \(entry.height) Cm\n      Weight: \(entry.weight) Kg")
+                    // swiftlint:disable:previous line_length
                 }
                 .onDelete(perform: deleteEntry)
             }

@@ -14,7 +14,7 @@ struct BMIBrain {
     var bmiVal: String {
         return "\(calculateBMI())"
     }
-    
+
     var bmiCategory: String {
         return "\(categoryBMI())"
     }

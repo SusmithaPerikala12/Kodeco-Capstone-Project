@@ -20,9 +20,9 @@ struct SideMenuView: View {
                     // }
             }
                 HStack {
-                    VStack(alignment: .leading, spacing: 32) {
+                    VStack(alignment: .leading) {
                         SideMenuHeaderView()
-                        VStack {
+                        VStack(spacing: 0 ) {
                             ForEach(SidemenuOptions.allCases) { option in
                                 Button {
                                     // withAnimation {

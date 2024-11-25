@@ -4,6 +4,7 @@ import Foundation
 enum SidemenuOptions: Int, CaseIterable {
     case home
     case bmi
+    case quotes
     case underweight
     case overweight
     case obesity
@@ -23,6 +24,8 @@ enum SidemenuOptions: Int, CaseIterable {
             return "Obesity"
         case .history:
             return "History"
+        case .quotes:
+            return "Positive Quotes"
         }
     }
     var systemImageName: String {
@@ -39,6 +42,8 @@ enum SidemenuOptions: Int, CaseIterable {
             return "heart.fill"
         case .history:
             return "list.star"
+        case .quotes:
+            return "quote.bubble"
         }
     }
 }

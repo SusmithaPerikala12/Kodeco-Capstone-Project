@@ -4,15 +4,15 @@ import SwiftUI
 struct SideMenuHeaderView: View {
     var body: some View {
         HStack {
-            Image(systemName: "person.circle.fill")
+            Image(systemName: "star.circle")
                 .imageScale(.large)
                 .foregroundStyle(.white)
                 .frame(width: 48, height: 48)
-                .background(.blue)
+                .background(.pink)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(.vertical)
             VStack(alignment: .leading, spacing: 6) {
-                Text("Susmitha Perikala")
+                Text("Welcome!!!")
                     .font(.subheadline)
 
             }
