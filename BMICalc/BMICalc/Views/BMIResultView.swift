@@ -30,12 +30,16 @@ struct BMIResultView: View {
                                         .textModifier()
                                         .padding(.top, 10)
                                     Text("\(Image(systemName: "heart.circle")) \(bmiBrain.categoryBMI()) \(Image(systemName: "heart.circle"))")
+                                    // swiftlint:disable:previous line_length
                                         .padding(.top, 20)
                                         .textModifier()
                                     Button("Save") {
-                                        let bmiViewModel = BMIViewModel(weight: Int(bmiBrain.weight), height: Int(bmiBrain.height), bmiVal: bmiBrain.bmiVal, bmiCategory: bmiBrain.bmiCategory)
+                                        let bmiViewModel = BMIViewModel(weight: Int(bmiBrain.weight),
+                                                                        height: Int(bmiBrain.height),
+                                                                        bmiVal: bmiBrain.bmiVal,
+                                                                        bmiCategory: bmiBrain.bmiCategory)
                                         bmiViewModel.saveSelections(bmiBrain: bmiBrain)
-                                        dismiss()
+                                            dismiss()
                                     }
                                     .movingbutton()
 

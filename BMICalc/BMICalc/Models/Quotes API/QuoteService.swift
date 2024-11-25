@@ -17,5 +17,5 @@ struct QuoteService {
         }
         return nil
     }
-   
+
 }

@@ -29,7 +29,8 @@ struct QuoteView: View {
                     .font(.title2)
                     .italic()
                     .multilineTextAlignment(.center)
-                    .foregroundStyle(LinearGradient(gradient: brandGradient, startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .foregroundStyle(LinearGradient(
+                        gradient: brandGradient, startPoint: .topLeading, endPoint: .bottomTrailing))
                     .shadow(color: .gray.opacity(0.7), radius: 10, x: 5, y: 5)
                     .scaleEffect(1.0)
                     .animation(.easeInOut(duration: 1).repeatForever(autoreverses: true), value: 1.0)
@@ -42,11 +43,14 @@ struct QuoteView: View {
                             await viewModel.fetchQuote()
                         }
                     }) {
+                        // swiftlint:disable:previous multiple_closures_with_trailing_closure
                         Text("Push Your Limits!")
                             .bold()
                             .frame(width: 200, height: 50)
                             .foregroundColor(.pink)
-                            .overlay(Capsule().stroke(LinearGradient(gradient: brandGradient,startPoint: .leading, endPoint: .trailing),lineWidth: 5))
+                            .overlay(Capsule().stroke(LinearGradient(gradient: brandGradient,
+                                                                     startPoint: .leading,
+                                                                     endPoint: .trailing), lineWidth: 5))
                     }
                     .padding()
                 }
