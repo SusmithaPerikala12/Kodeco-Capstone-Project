@@ -12,6 +12,10 @@ struct ContentView: View {
                     HomeView()
                         .tag(0)
                     // To be added later for other menus.
+                    QuoteView()
+                        .tag(2)
+                    HistoryView()
+                        .tag(6)
 
                 }
 
