@@ -12,6 +12,8 @@ struct ContentView: View {
                     HomeView()
                         .tag(0)
                     // To be added later for other menus.
+                    AboutBMIView()
+                        .tag(1)
                     QuoteView()
                         .tag(2)
                     HistoryView()
@@ -22,7 +24,7 @@ struct ContentView: View {
                 SideMenuView(isShowing: $showMenu, selectedTab: $selectedTab )
             }
             .toolbar(showMenu ? .hidden : .visible, for: .navigationBar)
-            .navigationTitle("Home")
+            // .navigationTitle("Home")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
