@@ -3,15 +3,14 @@ import SwiftUI
 
 struct SliderStackView: View {
 
-    @Binding var weight: Double
-    @Binding var height: Double
+    @Binding var bmiBrain: BMIBrain
     var body: some View {
         NavigationView {
             VStack {
-                SliderView(singleSlider: .weight, value: $weight)
-                SliderView(singleSlider: .height, value: $height)
+                SliderView(singleSlider: .weight, value: $bmiBrain.weight)
+                SliderView(singleSlider: .height, value: $bmiBrain.height)
 
-                NavigationLink(destination: BMIResultView(bmiVal: calculateBMI())) {
+                NavigationLink(destination: BMIResultView(bmiBrain: $bmiBrain)) {
                     Text("Calculate")
                     .primaryBg()
                 }
@@ -19,14 +18,9 @@ struct SliderStackView: View {
             }
         } .tint(Color(.pink))
     }
-    func calculateBMI() -> Double {
-        let heightInMeters = height / 100
-        return weight / (heightInMeters * heightInMeters)
-    }
-
 }
 
 #Preview {
-    SliderStackView(weight: .constant(50), height: .constant(50))
+    SliderStackView(bmiBrain: .constant(BMIBrain(weight: 50, height: 50)))
         .padding()
 }

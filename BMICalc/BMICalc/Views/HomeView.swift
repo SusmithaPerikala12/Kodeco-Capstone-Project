@@ -2,8 +2,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var weight: Double = 50
-    @State private var height: Double = 50
+    @State private var bmiBrain = BMIBrain(weight: 50, height: 50)
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @Environment(\.verticalSizeClass) var verticalSizeClass
 
@@ -19,7 +18,7 @@ struct HomeView: View {
 
         layout {
             ImageTextView()
-            SliderStackView( weight: $weight, height: $height)
+            SliderStackView(bmiBrain: $bmiBrain)
         }
         .padding()
 

@@ -2,20 +2,19 @@
 import SwiftUI
 
 struct PortraitView: View {
-    @Binding var weight: Double
-    @Binding var height: Double
+    @Binding var bmiBrain: BMIBrain
 
     var body: some View {
         VStack(spacing: 16) {
             ImageTextView()
             VStack {
-                SliderStackView(weight: $weight, height: $height)
+                SliderStackView(bmiBrain: $bmiBrain)
             }
         }
     }
 }
 
 #Preview {
-    PortraitView(weight: .constant(50), height: .constant(50))
+    PortraitView(bmiBrain: .constant(BMIBrain(weight: 50, height: 50)))
         .padding()
 }

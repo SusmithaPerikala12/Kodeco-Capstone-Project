@@ -9,7 +9,8 @@ import SwiftUI
 
 struct BMIResultView: View {
 
-    @State var bmiVal: Double
+    @Binding var bmiBrain: BMIBrain
+    
     var body: some View {
 
             ZStack {
@@ -17,22 +18,30 @@ struct BMIResultView: View {
                 startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
                 VStack {
-                    Text("BMI Value: ")
-                        .fontWeight(.bold)
-                        .foregroundStyle(.pink)
-                        .padding(.top, -100)
-                        .font(.system(size: 43))
-                    Text("\(bmiVal, specifier: "%.2f")")
-                        .padding(.top, -45)
-                        .foregroundStyle(.pink)
-                        .fontWeight(.bold)
-                        .font(.system(size: 25))
+                                    Text("BMI Value: ")
+                                        .fontWeight(.bold)
+                                        .foregroundStyle(.pink)
+                                        .padding(.top, -70)
+                                        .font(.system(size: 43))
+                                    Text(bmiBrain.bmiVal)
+                                        .textModifier()
+                                        .padding(.top, -25)
+                                    Text("Your BMI Category is:")
+                                        .textModifier()
+                                        .padding(.top, 10)
+                                    Text("\(Image(systemName: "heart.circle")) \(bmiBrain.categoryBMI()) \(Image(systemName: "heart.circle"))")
+                                        .padding(.top, 20)
+                                        .textModifier()
+                                    Button("Save") {
+                                        
+                                    }
+                                    .movingbutton()
 
-                }
+                                }
             }
     }
 }
 
 #Preview {
-    BMIResultView(bmiVal: 50.05)
+    BMIResultView(bmiBrain: .constant(BMIBrain(weight: 50, height: 50)))
 }
