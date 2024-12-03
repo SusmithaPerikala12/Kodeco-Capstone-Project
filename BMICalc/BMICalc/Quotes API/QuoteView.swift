@@ -10,12 +10,14 @@ import SwiftUI
 struct QuoteView: View {
     @StateObject private var viewModel = QuoteViewModel()
     var brandGradient = Gradient(colors: [Color(.orange), Color.pink, Color.purple])
-
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [.orange, .white, .white, .orange]),
-            startPoint: .topLeading, endPoint: .bottomTrailing)
+                           startPoint: .topLeading,
+                           endPoint: .bottomTrailing)
             .ignoresSafeArea()
+
             VStack(spacing: 20) {
                 Text("Start your day with a positive thought and watch the world change around you.")
                     .font(.title3)
@@ -24,7 +26,7 @@ struct QuoteView: View {
                     .foregroundStyle(.gray)
                     .multilineTextAlignment(.center)
                     .padding()
-
+                
                 Text("\"\(viewModel.quote)\"")
                     .font(.title2)
                     .italic()
@@ -35,13 +37,12 @@ struct QuoteView: View {
                     .scaleEffect(1.0)
                     .animation(.easeInOut(duration: 1).repeatForever(autoreverses: true), value: 1.0)
                     .padding()
+
                 if viewModel.isLoading {
                     ProgressView()
                 } else {
                     Button(action: {
-                        Task {
-                            await viewModel.fetchQuote()
-                        }
+                        Task { await viewModel.fetchQuote() }
                     }) {
                         // swiftlint:disable:previous multiple_closures_with_trailing_closure
                         Text("Push Your Limits!")
@@ -50,12 +51,15 @@ struct QuoteView: View {
                             .foregroundColor(.pink)
                             .overlay(Capsule().stroke(LinearGradient(gradient: brandGradient,
                                                                      startPoint: .leading,
-                                                                     endPoint: .trailing), lineWidth: 5))
+                                                                     endPoint: .trailing),
+                                                      lineWidth: 5))
                     }
                     .padding()
+
                 }
             }
             .padding()
+
         }
     }
 }

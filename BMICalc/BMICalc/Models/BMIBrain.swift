@@ -1,9 +1,9 @@
 import Foundation
 
 struct BMIBrain {
+
     var weight: Double
     var height: Double
-
     var bmiVal: String {
         return "\(calculateBMI())"
     }
@@ -31,4 +31,5 @@ struct BMIBrain {
             return "Obesity"
         }
     }
+
 }

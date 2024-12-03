@@ -1,4 +1,5 @@
 import SwiftUI
+
 struct ContentView: View {
     // To control side menu.
     @State private var showMenu = false
@@ -18,9 +19,7 @@ struct ContentView: View {
                         .tag(2)
                     HistoryView()
                         .tag(6)
-
                 }
-
                 SideMenuView(isShowing: $showMenu, selectedTab: $selectedTab )
             }
             .toolbar(showMenu ? .hidden : .visible, for: .navigationBar)
@@ -33,12 +32,9 @@ struct ContentView: View {
                     } label: {
                         Image(systemName: "line.3.horizontal")
                     }
-
                 }
             }
-
         }
-
     }
 }
 

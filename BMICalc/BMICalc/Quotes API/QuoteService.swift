@@ -8,6 +8,7 @@
 import Foundation
 
 struct QuoteService {
+
     static func fetchRandomQuote() async throws -> String? {
         let url = URL(string: "https://qapi.vercel.app/api/random")!
         let (data, _) = try await URLSession.shared.data(from: url)
@@ -17,5 +18,5 @@ struct QuoteService {
         }
         return nil
     }
-
+    
 }

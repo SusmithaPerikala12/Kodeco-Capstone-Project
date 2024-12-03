@@ -7,9 +7,8 @@
 
 import SwiftUI
 struct HistoryView: View {
-
+    
     @State private var bmiViewModelList: [BMIViewModel] = []
-
     var body: some View {
         NavigationStack {
             List {
@@ -25,11 +24,14 @@ struct HistoryView: View {
             }
         }
     }
+    
     func deleteEntry(at offsets: IndexSet) {
         bmiViewModelList.remove(atOffsets: offsets)
         BMIViewModel.saveEntries(bmiViewModelList)
     }
+    
 }
+
 #Preview {
     HistoryView()
 }

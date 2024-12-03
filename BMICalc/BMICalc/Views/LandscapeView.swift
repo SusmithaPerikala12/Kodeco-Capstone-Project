@@ -3,7 +3,6 @@ import SwiftUI
 
 struct LandscapeView: View {
     @Binding var bmiBrain: BMIBrain
-
     var body: some View {
         HStack(spacing: 16) {
             ImageTextView()

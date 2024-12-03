@@ -26,9 +26,9 @@ enum SidemenuOptions: Int, CaseIterable {
             return "Obesity"
         case .history:
             return "History"
-
         }
     }
+
     var systemImageName: String {
         switch self {
         case .home:

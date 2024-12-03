@@ -5,11 +5,11 @@ import SwiftUI
 enum Sliders {
     case weight
     case height
-
+    
     var title: String {
         String(describing: self).capitalized
     }
-
+    
     var tintColor: Color {
         switch self {
         case .weight:
@@ -18,6 +18,7 @@ enum Sliders {
             return .green
         }
     }
+
     var units: String {
         switch self {
         case .weight:
@@ -26,4 +27,5 @@ enum Sliders {
             return "Cm"
         }
     }
+
 }

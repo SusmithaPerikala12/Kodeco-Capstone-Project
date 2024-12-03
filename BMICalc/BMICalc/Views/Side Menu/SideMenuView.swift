@@ -15,9 +15,11 @@ struct SideMenuView: View {
                     .opacity(0.3)
                     .ignoresSafeArea()
                     .onTapGesture { isShowing.toggle() }
+
                 HStack {
                     VStack(alignment: .leading) {
                         SideMenuHeaderView()
+                        
                         VStack(spacing: 0) {
                             ForEach(SidemenuOptions.allCases) { option in
                                 Button {
@@ -27,7 +29,6 @@ struct SideMenuView: View {
                                 } label: {
                                     SideMenuRowView(option: option, selectedOption: $selectedOption)
                                 }
-
                             }
                         }
                         Spacer()
@@ -38,7 +39,6 @@ struct SideMenuView: View {
                     .foregroundStyle(.black)
                     Spacer()
                 }
-
             }
         }
     }
