@@ -18,6 +18,7 @@ enum Sliders {
             return .green
         }
     }
+
     var units: String {
         switch self {
         case .weight:
@@ -26,4 +27,5 @@ enum Sliders {
             return "Cm"
         }
     }
+
 }

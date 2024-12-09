@@ -8,6 +8,7 @@ struct SideMenuView: View {
     @Binding var selectedTab: Int
     // To highlight which tab is selected.
     @State private var selectedOption: SidemenuOptions?
+
     var body: some View {
         ZStack {
             if isShowing {
@@ -15,9 +16,11 @@ struct SideMenuView: View {
                     .opacity(0.3)
                     .ignoresSafeArea()
                     .onTapGesture { isShowing.toggle() }
+
                 HStack {
                     VStack(alignment: .leading) {
                         SideMenuHeaderView()
+
                         VStack(spacing: 0) {
                             ForEach(SidemenuOptions.allCases) { option in
                                 Button {
@@ -38,7 +41,6 @@ struct SideMenuView: View {
                     .foregroundStyle(.black)
                     Spacer()
                 }
-
             }
         }
     }

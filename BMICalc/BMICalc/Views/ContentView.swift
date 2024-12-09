@@ -1,9 +1,11 @@
 import SwiftUI
+
 struct ContentView: View {
     // To control side menu.
     @State private var showMenu = false
     // To know which option is selected for displaying the data accordingly.
     @State private var selectedTab = 0
+
     var body: some View {
         NavigationStack {
             // Used ZStack to override the Home page.
@@ -18,9 +20,7 @@ struct ContentView: View {
                         .tag(2)
                     HistoryView()
                         .tag(6)
-
                 }
-
                 SideMenuView(isShowing: $showMenu, selectedTab: $selectedTab )
             }
             .toolbar(showMenu ? .hidden : .visible, for: .navigationBar)
@@ -33,12 +33,9 @@ struct ContentView: View {
                     } label: {
                         Image(systemName: "line.3.horizontal")
                     }
-
                 }
             }
-
         }
-
     }
 }
 

@@ -4,10 +4,9 @@
 //
 //  Created by Susmitha Perikala on 25/11/24.
 //
-
 import SwiftUI
-struct HistoryView: View {
 
+struct HistoryView: View {
     @State private var bmiViewModelList: [BMIViewModel] = []
 
     var body: some View {
@@ -25,11 +24,14 @@ struct HistoryView: View {
             }
         }
     }
+
     func deleteEntry(at offsets: IndexSet) {
         bmiViewModelList.remove(atOffsets: offsets)
         BMIViewModel.saveEntries(bmiViewModelList)
     }
+
 }
+
 #Preview {
     HistoryView()
 }

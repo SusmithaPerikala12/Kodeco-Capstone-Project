@@ -10,18 +10,18 @@ struct HomeView: View {
     var layout: AnyLayout {
         landscapeIsCompact ? AnyLayout(HStackLayout(spacing: 16)) : AnyLayout(VStackLayout(spacing: 16))
     }
+
     var landscapeIsCompact: Bool {
         horizontalSizeClass == .compact && verticalSizeClass == .compact ||
         horizontalSizeClass == .regular && verticalSizeClass == .compact
     }
-    var body: some View {
 
+    var body: some View {
         layout {
             ImageTextView()
             SliderStackView(bmiBrain: $bmiBrain)
         }
         .padding()
-
     }
 
 }
@@ -29,6 +29,7 @@ struct HomeView: View {
 #Preview {
     HomeView()
 }
+
 #Preview(traits: .landscapeLeft) {
     HomeView()
 }

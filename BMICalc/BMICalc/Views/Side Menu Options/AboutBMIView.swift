@@ -14,8 +14,9 @@ struct AboutBMIView: View {
         ScrollView {
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [.green, .white, .white, .white]),
-                startPoint: .topLeading, endPoint: .bottomTrailing)
+                               startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
+
                 VStack(alignment: .leading, spacing: 20) {
                     Text("What is BMI?")
                         .font(.title)
@@ -57,10 +58,8 @@ struct AboutBMIView: View {
                 }
                 .padding()
             }
-            
-                }
-                .navigationTitle("Know About BMI")
-                
+        }
+        .navigationTitle("Know About BMI")
     }
 }
 

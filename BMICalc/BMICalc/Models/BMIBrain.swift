@@ -14,8 +14,8 @@ struct BMIBrain {
 
     func calculateBMI() -> String {
         let heightInMeters = Double(Int(height)) / 100
-        print(heightInMeters, Int(weight))
-        print(Double(Int(weight)) / Double(heightInMeters * heightInMeters))
+        // print(heightInMeters, Int(weight))
+        // print(Double(Int(weight)) / Double(heightInMeters * heightInMeters))
         return String(format: "%.2f", Double(Int(weight)) / Double(heightInMeters * heightInMeters))
     }
 
@@ -31,4 +31,5 @@ struct BMIBrain {
             return "Obesity"
         }
     }
+
 }
