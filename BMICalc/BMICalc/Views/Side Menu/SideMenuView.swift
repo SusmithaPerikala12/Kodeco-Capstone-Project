@@ -18,10 +18,10 @@ struct SideMenuView: View {
                     .onTapGesture { isShowing.toggle() }
 
                 HStack {
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 32) {
                         SideMenuHeaderView()
 
-                        VStack(spacing: 0) {
+                        VStack {
                             ForEach(SidemenuOptions.allCases) { option in
                                 Button {
                                     selectedOption = option

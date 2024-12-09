@@ -20,8 +20,10 @@ struct ContentView: View {
                             .tag(1)
                         QuoteView()
                             .tag(2)
+                        TipsView()
+                            .tag(3)
                         HistoryView()
-                            .tag(6)
+                            .tag(4)
                     }
                     SideMenuView(isShowing: $showMenu, selectedTab: $selectedTab )
                 }
