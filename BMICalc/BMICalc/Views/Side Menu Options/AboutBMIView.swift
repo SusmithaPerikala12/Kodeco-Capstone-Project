@@ -13,10 +13,6 @@ struct AboutBMIView: View {
     var body: some View {
         ScrollView {
             ZStack {
-                LinearGradient(gradient: Gradient(colors: [.green, .white, .white, .white]),
-                               startPoint: .topLeading, endPoint: .bottomTrailing)
-                .ignoresSafeArea()
-
                 VStack(alignment: .leading, spacing: 20) {
                     Text("What is BMI?")
                         .font(.title)
@@ -42,10 +38,10 @@ struct AboutBMIView: View {
                         .padding(.horizontal)
                     
                     Text("""
-                                - Underweight: BMI less than 18.5
-                                - Normal weight: BMI between 18.5 and 24.9
-                                - Overweight: BMI between 25 and 29.9
-                                - Obese: BMI of 30 or higher
+                                \(Image(systemName: "star.fill")) Underweight: BMI less than 18.5
+                                \(Image(systemName: "star.fill")) Normal weight: BMI between 18.5 and 24.9
+                                \(Image(systemName: "star.fill")) Overweight: BMI between 25 and 29.9
+                                \(Image(systemName: "star.fill")) Obese: BMI of 30 or higher
                                 """)
                     .font(.body)
                     .padding(.horizontal)
@@ -56,10 +52,16 @@ struct AboutBMIView: View {
                     
                     Spacer()
                 }
-                .padding()
+                .padding(.horizontal)
             }
         }
-        .navigationTitle("Know About BMI")
+        .padding(.vertical, 1)
+        .background {
+            LinearGradient(gradient: Gradient(colors: [.green, .white, .white, .white]),
+                           startPoint: .topLeading,
+                           endPoint: .bottomTrailing)
+            .ignoresSafeArea()
+        }
     }
 }
 
