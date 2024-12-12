@@ -8,7 +8,7 @@ struct ImageTextView: View {
                 .font(.largeTitle)
                 .foregroundStyle(.pink)
 
-            Image("HomeBackground")
+            Image("Homebg")
                 .resizable()
                 .scaledToFit()
         }

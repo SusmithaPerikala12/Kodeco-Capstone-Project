@@ -2,6 +2,9 @@
 import SwiftUI
 
 struct SideMenuHeaderView: View {
+    @Environment(\.colorScheme) var colorScheme
+    @AppStorage("isDarkMode") private var isDarkMode = false
+
     var body: some View {
         HStack {
             Image(systemName: "star.circle")
@@ -16,7 +19,26 @@ struct SideMenuHeaderView: View {
                 Text("Welcome!!!")
                     .font(.subheadline)
             }
+
+            Spacer()
+
+            Button {
+                isDarkMode.toggle()
+                setAppearance()
+            } label: {
+                Image(systemName: isDarkMode ? "moon.circle.fill" : "sun.max")
+                    .font(.title3)
+            }
         }
+        .onAppear {
+            setAppearance()
+        }
+    }
+    private func setAppearance() {
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+            return
+        }
+        windowScene.keyWindow?.overrideUserInterfaceStyle = isDarkMode ? .dark : .light
     }
 }
 

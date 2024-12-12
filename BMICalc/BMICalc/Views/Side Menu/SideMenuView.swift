@@ -8,6 +8,7 @@ struct SideMenuView: View {
     @Binding var selectedTab: Int
     // To highlight which tab is selected.
     @State private var selectedOption: SidemenuOptions?
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         ZStack {
@@ -37,8 +38,8 @@ struct SideMenuView: View {
                     }
                     .padding()
                     .frame(width: 270, alignment: .leading) // width for HStack
-                    .background(.white)
-                    .foregroundStyle(.black)
+                    .background(colorScheme == .dark ? .black: .white)
+                    .foregroundStyle(colorScheme == .dark ? .white: .black)
                     Spacer()
                 }
             }

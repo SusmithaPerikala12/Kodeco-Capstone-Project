@@ -9,13 +9,18 @@ import SwiftUI
 struct QuoteView: View {
     @StateObject private var viewModel = QuoteViewModel()
     var brandGradient = Gradient(colors: [Color(.orange), Color.pink, Color.purple])
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.orange, .white, .white, .orange]),
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing)
-            .ignoresSafeArea()
+            if  colorScheme == .dark {
+                Color.black
+            } else {
+                LinearGradient(gradient: Gradient(colors: [.orange, .white, .white, .orange]),
+                               startPoint: .topLeading,
+                               endPoint: .bottomTrailing)
+                .ignoresSafeArea()
+            }
 
             VStack(spacing: 20) {
                 Text("Start your day with a positive thought and watch the world change around you.")

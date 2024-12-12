@@ -10,6 +10,7 @@ import SwiftUI
 // swiftlint:disable:previous blanket_disable_command
 
 struct AboutBMIView: View {
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         ScrollView {
             ZStack {
@@ -57,10 +58,14 @@ struct AboutBMIView: View {
         }
         .padding(.vertical, 1)
         .background {
-            LinearGradient(gradient: Gradient(colors: [.green, .white, .white, .white]),
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing)
-            .ignoresSafeArea()
+            if colorScheme == .dark {
+                Color.black
+            } else {
+                LinearGradient(gradient: Gradient(colors: [.green, .white, .white, .white]),
+                               startPoint: .topLeading,
+                               endPoint: .bottomTrailing)
+                .ignoresSafeArea()
+            }
         }
     }
 }

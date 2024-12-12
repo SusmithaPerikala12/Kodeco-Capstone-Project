@@ -9,13 +9,18 @@ import SwiftUI
 struct BMIResultView: View {
     @Binding var bmiBrain: BMIBrain
     @Environment(\.dismiss) var dismiss
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.pink, .white, .white, .pink]),
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing)
-            .ignoresSafeArea()
+            if colorScheme == .dark {
+                Color.black
+            } else {
+                LinearGradient(gradient: Gradient(colors: [.pink, .white, .white, .pink]),
+                               startPoint: .topLeading,
+                               endPoint: .bottomTrailing)
+                .ignoresSafeArea()
+            }
 
             VStack {
                 Text("BMI Value: ")
