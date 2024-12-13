@@ -24,10 +24,16 @@ Obesity = BMI of 30 or greater
 6. This app also includes tips for each BMI category.
 
 
-<img width="352" alt="Screen1" src="https://github.com/user-attachments/assets/8ea31fec-74ab-43d1-b436-e9034d48402e">
+
+
+<img width="352" alt="Homepage" src="https://github.com/user-attachments/assets/72c447c3-5e1b-4bed-b2ea-9db707eadf02" />
 &nbsp;
-<img width="352" alt="Screen2" src="https://github.com/user-attachments/assets/e0c4ac83-12d8-4d6c-98d0-fb10dbfbcf0b">
+<img width="463" alt="SideMenu" src="https://github.com/user-attachments/assets/24fc9e12-fdb8-4dd8-b187-cdab1d5320a4" />
 <br>
-<img width="352" alt="Screen3" src="https://github.com/user-attachments/assets/27ad6363-02d3-46af-9551-8ceef66f4bc4">
+<img width="460" alt="resultScreen" src="https://github.com/user-attachments/assets/1a3ddff5-14eb-4dc6-8384-f9b6348eda01" />
 &nbsp;&nbsp;&nbsp;
-<img width="355" alt="Screen4" src="https://github.com/user-attachments/assets/ccc74f92-03cf-4d5f-a01a-d583e89d1a8d">
+<img width="465" alt="History" src="https://github.com/user-attachments/assets/02e6816d-6403-41c1-8dc2-82e0edb03505" />
+&nbsp;&nbsp;&nbsp;
+<img width="453" alt="Tips" src="https://github.com/user-attachments/assets/16d5644f-73b6-4c3b-b0f4-e4ec403505e6" />
+&nbsp;&nbsp;&nbsp;
+<img width="461" alt="DarkMode" src="https://github.com/user-attachments/assets/77bc49bf-5fff-4a11-a892-ec9c4eda32ea" />
