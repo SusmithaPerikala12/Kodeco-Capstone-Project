@@ -28,12 +28,12 @@ Obesity = BMI of 30 or greater
 
 <img width="352" alt="Homepage" src="https://github.com/user-attachments/assets/72c447c3-5e1b-4bed-b2ea-9db707eadf02" />
 &nbsp;
-<img width="463" alt="SideMenu" src="https://github.com/user-attachments/assets/24fc9e12-fdb8-4dd8-b187-cdab1d5320a4" />
+<img width="352" alt="SideMenu" src="https://github.com/user-attachments/assets/24fc9e12-fdb8-4dd8-b187-cdab1d5320a4" />
 <br>
-<img width="460" alt="resultScreen" src="https://github.com/user-attachments/assets/1a3ddff5-14eb-4dc6-8384-f9b6348eda01" />
+<img width="352" alt="resultScreen" src="https://github.com/user-attachments/assets/1a3ddff5-14eb-4dc6-8384-f9b6348eda01" />
 &nbsp;&nbsp;&nbsp;
-<img width="465" alt="History" src="https://github.com/user-attachments/assets/02e6816d-6403-41c1-8dc2-82e0edb03505" />
+<img width="352" alt="History" src="https://github.com/user-attachments/assets/02e6816d-6403-41c1-8dc2-82e0edb03505" />
 &nbsp;&nbsp;&nbsp;
-<img width="453" alt="Tips" src="https://github.com/user-attachments/assets/16d5644f-73b6-4c3b-b0f4-e4ec403505e6" />
+<img width="352" alt="Tips" src="https://github.com/user-attachments/assets/16d5644f-73b6-4c3b-b0f4-e4ec403505e6" />
 &nbsp;&nbsp;&nbsp;
-<img width="461" alt="DarkMode" src="https://github.com/user-attachments/assets/77bc49bf-5fff-4a11-a892-ec9c4eda32ea" />
+<img width="352" alt="DarkMode" src="https://github.com/user-attachments/assets/77bc49bf-5fff-4a11-a892-ec9c4eda32ea" />
