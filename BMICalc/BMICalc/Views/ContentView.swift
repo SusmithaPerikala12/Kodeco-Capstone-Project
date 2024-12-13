@@ -6,6 +6,8 @@ struct ContentView: View {
     // To know which option is selected for displaying the data accordingly.
     @State private var selectedTab = 0
     @AppStorage("currentPage") var currentPage = 1
+    @Environment(\.colorScheme) var colorScheme
+    @AppStorage("isDarkMode")  var isDarkMode = false
 
     var body: some View {
         if currentPage > totalPages {
@@ -43,8 +45,18 @@ struct ContentView: View {
                                 .foregroundStyle(.pink)
                         }
                     }
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button {
+                            isDarkMode.toggle()
+                        } label: {
+                            Image(systemName: isDarkMode ? "moon.circle.fill" : "sun.max")
+                                .foregroundStyle(isDarkMode ? .white: Color.orange)
+                                .frame(width: 50, height: 50)
+                        }
+                    }
                 }
             }
+            .preferredColorScheme(isDarkMode ? .dark : .light)
         } else {
             OnboardingView()
         }

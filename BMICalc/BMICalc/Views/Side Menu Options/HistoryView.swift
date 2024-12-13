@@ -33,7 +33,7 @@ struct HistoryView: View {
         }
     }
 
-    func deleteEntry(at offsets: IndexSet) {
+    private func deleteEntry(at offsets: IndexSet) {
         bmiViewModelList.remove(atOffsets: offsets)
         BMIViewModel.saveEntries(bmiViewModelList)
     }
