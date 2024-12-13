@@ -46,7 +46,8 @@ struct BMIResultView: View {
                     let bmiViewModel = BMIViewModel(weight: Int(bmiBrain.weight),
                                                     height: Int(bmiBrain.height),
                                                     bmiVal: bmiBrain.bmiVal,
-                                                    bmiCategory: bmiBrain.bmiCategory)
+                                                    bmiCategory: bmiBrain.bmiCategory,
+                                                    timestamp: Date().formatted())
                     bmiViewModel.saveSelections(bmiBrain: bmiBrain)
                     dismiss()
                 }

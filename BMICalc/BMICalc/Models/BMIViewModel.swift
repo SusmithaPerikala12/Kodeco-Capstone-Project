@@ -12,12 +12,14 @@ struct BMIViewModel: Identifiable, Codable, Hashable {
     let height: Int
     let bmiVal: String
     let bmiCategory: String
+    let timestamp: String
 
     func saveSelections(bmiBrain: BMIBrain) {
         let newEntry = BMIViewModel(weight: Int(bmiBrain.weight),
                                     height: Int(bmiBrain.height),
                                     bmiVal: bmiBrain.bmiVal,
-                                    bmiCategory: bmiBrain.bmiCategory)
+                                    bmiCategory: bmiBrain.bmiCategory,
+                                    timestamp: Date().formatted())
 
         var savedEntries = BMIViewModel.loadSavedEntries()
         savedEntries.append(newEntry)
