@@ -15,15 +15,19 @@ struct ContentView: View {
                     TabView(selection: $selectedTab) {
                         HomeView()
                             .tag(0)
-                        // To be added later for other menus.
+                            .toolbar(.hidden, for: .tabBar)
                         AboutBMIView()
                             .tag(1)
+                            .toolbar(.hidden, for: .tabBar)
                         QuoteView()
                             .tag(2)
+                            .toolbar(.hidden, for: .tabBar)
                         TipsView()
                             .tag(3)
+                            .toolbar(.hidden, for: .tabBar)
                         HistoryView()
                             .tag(4)
+                            .toolbar(.hidden, for: .tabBar)
                     }
                     SideMenuView(isShowing: $showMenu, selectedTab: $selectedTab )
                 }
