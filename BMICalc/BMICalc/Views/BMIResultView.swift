@@ -4,6 +4,7 @@
 //
 //  Created by Susmitha Perikala on 05/11/24.
 //
+//  This View Displays the BMI Value and Category to the User.
 import SwiftUI
 
 struct BMIResultView: View {

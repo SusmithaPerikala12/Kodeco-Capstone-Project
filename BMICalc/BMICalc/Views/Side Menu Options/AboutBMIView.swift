@@ -4,7 +4,7 @@
 //
 //  Created by Susmitha Perikala on 13/11/24.
 //
-
+// Introduction to BMI.
 import SwiftUI
 // swiftlint:disable all
 // swiftlint:disable:previous blanket_disable_command

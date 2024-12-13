@@ -9,6 +9,7 @@ import SwiftUI
 struct QuoteView: View {
     @StateObject private var viewModel = QuoteViewModel()
     var brandGradient = Gradient(colors: [Color(.orange), Color.pink, Color.purple])
+    // To get the Current mode of the app.
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {

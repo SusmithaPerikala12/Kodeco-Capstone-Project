@@ -3,7 +3,7 @@
 //  SideMenuTutorial
 //
 //  Created by Susmitha Perikala on 27/11/24.
-//
+//  Integrates all three Overweight, Obesity and Underweight Health Tips.
 import SwiftUI
 
 struct TipsView: View {

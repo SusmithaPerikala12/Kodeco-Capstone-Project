@@ -4,6 +4,7 @@
 //
 //  Created by Susmitha Perikala on 25/11/24.
 //
+// Saves all the the data like BMI category, value, height and weight.
 import SwiftUI
 
 // swiftlint:disable all

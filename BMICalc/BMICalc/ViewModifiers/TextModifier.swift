@@ -3,7 +3,7 @@
 //  BMICalc
 //
 //  Created by Susmitha Perikala on 25/11/24.
-//
+//  Custom Modifier.
 import Foundation
 import SwiftUI
 

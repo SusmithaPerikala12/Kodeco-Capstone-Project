@@ -4,6 +4,7 @@
 //
 //  Created by Susmitha Perikala on 27/11/24.
 //
+//  Health Tips for Obesity Category.
 import SwiftUI
 
 struct ObesityView: View {
