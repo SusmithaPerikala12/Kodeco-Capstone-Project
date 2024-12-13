@@ -5,9 +5,7 @@ enum SidemenuOptions: Int, CaseIterable {
     case home
     case bmi
     case quotes
-    case underweight
-    case overweight
-    case obesity
+    case tips
     case history
 
     var title: String {
@@ -18,35 +16,28 @@ enum SidemenuOptions: Int, CaseIterable {
             return "Know about BMI"
         case .quotes:
             return "Positive Quotes"
-        case .underweight:
-            return "Underweight"
-        case .overweight:
-            return "Overweight"
-        case .obesity:
-            return "Obesity"
+        case .tips:
+            return "Health Tips"
         case .history:
             return "History"
-
         }
     }
+
     var systemImageName: String {
         switch self {
         case .home:
             return "house.fill"
         case .bmi:
             return "magnifyingglass"
-        case .underweight:
-            return "heart.fill"
-        case .overweight:
-            return "heart.fill"
-        case .obesity:
-            return "heart.fill"
+        case .tips:
+            return "list.bullet.rectangle"
         case .history:
             return "list.star"
         case .quotes:
             return "quote.bubble"
         }
     }
+
 }
 
 extension SidemenuOptions: Identifiable {

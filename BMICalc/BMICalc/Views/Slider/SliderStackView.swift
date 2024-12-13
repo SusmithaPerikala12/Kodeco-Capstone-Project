@@ -5,18 +5,18 @@ struct SliderStackView: View {
 
     @Binding var bmiBrain: BMIBrain
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 SliderView(singleSlider: .weight, value: $bmiBrain.weight)
                 SliderView(singleSlider: .height, value: $bmiBrain.height)
 
                 NavigationLink(destination: BMIResultView(bmiBrain: $bmiBrain)) {
                     Text("Calculate")
-                    .primaryBg()
+                        .primaryBg()
                 }
-
             }
-        } .tint(Color(.pink))
+        }
+        .tint(Color(.pink))
     }
 }
 

@@ -7,6 +7,7 @@ struct LandscapeView: View {
     var body: some View {
         HStack(spacing: 16) {
             ImageTextView()
+
             SliderStackView(bmiBrain: $bmiBrain)
         }
     }

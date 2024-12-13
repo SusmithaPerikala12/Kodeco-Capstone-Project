@@ -13,21 +13,16 @@ struct SideMenuRowView: View {
     private var isSelected: Bool {
         return selectedOption == option
     }
+
     var body: some View {
         HStack {
+            Image(systemName: option.systemImageName)
+                .imageScale(.small)
 
-            if option.systemImageName == "heart.fill" {
-                Image(systemName: option.systemImageName)
-                    .imageScale(.small)
-                    .foregroundStyle(.red)
-            } else {
-                Image(systemName: option.systemImageName)
-                    .imageScale(.small)
-            }
             Text(option.title)
                 .font(.subheadline)
-            Spacer()
 
+            Spacer()
         }
         .padding(.leading)
         .frame(width: 216, height: 44)
@@ -35,7 +30,6 @@ struct SideMenuRowView: View {
         .foregroundStyle(isSelected ? .pink : .primary)
         .background(isSelected ? .pink.opacity(0.15): .clear)
         .clipShape(RoundedRectangle(cornerRadius: 10))
-
     }
 }
 
